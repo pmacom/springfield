@@ -1,0 +1,21 @@
+{
+  "name": "springfield",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Springfield.js",
+  "scripts": {
+    "springfield": "sudo node ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "mplayer": "^2.1.0",
+    "sudo": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0",
+    "nodemon": "^1.9.2"
+  }
+}
