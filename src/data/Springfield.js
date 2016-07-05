@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var config = require('../../config');
 var data = require('./data-simpsons');
 
 // TODO: Allow shuffling per channels
@@ -17,7 +18,7 @@ var Springfield = {
   initChannel: function( channel ) {
     console.log('chan', channel);
     // TODO: Get the dir from the config again
-    var directory = '/media/sda1/' + 'Channels/';
+    var directory = config.usb + 'Channels/';
     console.log('chan', channel);
     Springfield.state.channels = Springfield.getChannels( directory );
     Springfield.state.currentChannelData = Springfield.findVideos( directory + Springfield.state.channels[ channel ] );
