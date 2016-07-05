@@ -87,6 +87,7 @@ Player.prototype = _.extend({
             console.log('stdout: ' + data);
         }
 
+        console.log( data );
         data = data.toString();
 
         if(data.indexOf('MPlayer') === 0) {
@@ -102,6 +103,12 @@ Player.prototype = _.extend({
         if(data.indexOf('MOUSE_BTN0') !== -1) {
           console.log('TOUCCHHEED');
           this.emit('touch');
+          this.emit('pause');
+        }
+
+        // TODO: Figure out why this godamn error happens
+        if(data.indexOf('CPLAYER:') !== -1 || data.indexOf('failed (-5): Input/output error') !== -1 ) {
+          this.emit('stop');
         }
 
         if(data.indexOf('StreamTitle') !== -1) {

@@ -1,0 +1,15 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          springfield
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start player at boot time
+# Description:       Doh.
+### END INIT INFO
+
+#SPRINGFIELD_LOCATION=$(sudo blkid | grep "SPRINGFIELD" | cut -d':' -f 1)
+#if [ $SPRINGFIELD_LOCATION ]; then pmount $SPRINGFIELD_LOCATION; else echo "SP$
+
+#sudo node /home/pi/Springfield/src/index.js

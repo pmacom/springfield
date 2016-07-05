@@ -32,6 +32,15 @@ var MPlayer = function(options) {
         this.emit('status', this.status);
     }.bind(this));
 
+    this.player.on('touch', function(status) {
+        this.status = _.extend(this.status, status);
+        // if(options.verbose) {
+        //     console.log('player.status', this.status);
+        // }
+        console.log('mplayer is saying touch event fired');
+        this.emit('touch', this.status);
+    }.bind(this));
+
     this.player.on('playstart', function() {
         if(options.verbose) {
             console.log('player.start');
