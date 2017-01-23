@@ -4,7 +4,8 @@
   "description": "",
   "main": "Springfield.js",
   "scripts": {
-    "springfield": "sudo node ./src/index.js"
+    "springfield": "sudo node ./src/index.js",
+    "test": "sudo node ./src/test.js"
   },
   "author": "",
   "license": "ISC",
