@@ -1,0 +1,16 @@
+<template name="MaterialEdit">
+
+  <h1>Add Commercial</h1>
+
+  {{#autoForm
+    schema=Comemrcial
+    collection="Commercial"
+    id="commercialEdit"
+    doc=commercial.info
+    type=commercial.mode
+    validation="blur"
+  }}
+
+  {{/autoForm}}
+
+</template>
