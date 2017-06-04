@@ -83,7 +83,7 @@ var Springfield = {
       else {
         // TODO: Check against a file type whitelist
         // TODO: Find out what mplayer can actually play
-        if( file.indexOf( 'mkv' ) > -1 || file.indexOf( 'm4v' ) > -1 ){
+        if( file.indexOf( 'avi' ) > -1 || file.indexOf( 'm4v' ) > -1 ){
           info = Springfield.getSeasonEpisodeFromFileName( file );
           index = _.findIndex( data , info );
           if( index > 0 ){

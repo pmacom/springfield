@@ -1,5 +1,18 @@
 # Springfield
 
+KeDei 3.5 inch SPI TFTLCD
+480x320 16bit/18bit
+
+version 6.1 2016/5/1
+
+sudo sed -i 's/\/dev\/fb0/\/dev\/fb1/g' /usr/share/X11/xorg.conf.d/99-fbturbo.conf
+
+sudo sed -i 's/XKBLAYOUT="gb"/XKBLAYOUT="us"/g' /etc/default/keyboard
+sudo apt-get install git
+sudo apt-get install npm
+sudo apt-get install pmount
+sudo blkid | grep "SPRINGFIELD" | cut -d':' -f 1
+
 Install:
   - Move the 'springfield' file from /docs/files into the pi's /etc/init.d/ directory
   - run chmod a+x /etc/init.d/springfield on the pi
