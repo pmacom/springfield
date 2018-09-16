@@ -9,7 +9,5 @@
 # Description:       Doh.
 ### END INIT INFO
 
-SPRINGFIELD_LOCATION=$(sudo blkid | grep "SPRINGFIELD" | cut -d':' -f 1)
-if [ $SPRINGFIELD_LOCATION ]; then pmount $SPRINGFIELD_LOCATION; else echo "SPRINGFIELD: Please insert USB and reboot"; fi
-
-sudo node /home/pi/Springfield/src/index.js
+NBOX_LOCATION=$(sudo blkid | grep "NBOX" | cut -d':' -f 1)
+if [ $NBOX_LOCATION ]; then pmount $NBOX_LOCATION; else echo "NBOX_LOCATION: Please insert USB and reboot"; fi
